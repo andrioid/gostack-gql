@@ -1,0 +1,7 @@
+version: 1
+packages:
+  - path: "pkg/pgdb"
+    name: "pgdb"
+    engine: "postgresql"
+    schema: "pkg/pgdb/schema"
+    queries: "pkg/pgdb/query.sql"
