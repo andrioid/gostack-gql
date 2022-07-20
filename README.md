@@ -1,6 +1,6 @@
 ### Experiment: gostack-gql
 
-Nothing fancy. Just trying out some basic backend with sqlc and gqlgen. The main motivation is to see if it's viable to go schema-first for a backend application.
+Nothing fancy. Just trying out some basic backend. The main motivation is to see if it's viable to go schema-first for a backend application.
 
 Database functions are generated from database migration files with [sqlc](https://sqlc.dev) and the API is generated from a GraphQL schema files using [gqlgen](https://gqlgen.com).
 
