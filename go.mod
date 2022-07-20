@@ -3,8 +3,9 @@ module github.com/andrioid/gostack-gql
 go 1.18
 
 require (
-	github.com/99designs/gqlgen v0.17.12
+	github.com/99designs/gqlgen v0.17.13
 	github.com/google/uuid v1.3.0
+	github.com/kyleconroy/sqlc v1.14.0
 	github.com/lib/pq v1.10.6
 	github.com/vektah/gqlparser/v2 v2.4.6
 )
@@ -19,8 +20,6 @@ require (
 	github.com/hashicorp/golang-lru v0.5.4 // indirect
 	github.com/inconshreveable/mousetrap v1.0.0 // indirect
 	github.com/jinzhu/inflection v1.0.0 // indirect
-	github.com/kyleconroy/sqlc v1.14.0 // indirect
-	github.com/matryer/moq v0.2.7 // indirect
 	github.com/mitchellh/mapstructure v1.3.1 // indirect
 	github.com/pganalyze/pg_query_go/v2 v2.1.0 // indirect
 	github.com/pingcap/errors v0.11.5-0.20210425183316-da1aaba5fb63 // indirect

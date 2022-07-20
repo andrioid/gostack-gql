@@ -1,4 +1,4 @@
-package gql
+package main
 
 import (
 	"log"
@@ -7,13 +7,13 @@ import (
 
 	"github.com/99designs/gqlgen/graphql/handler"
 	"github.com/99designs/gqlgen/graphql/playground"
-	"github.com/andrioid/gostack-gql/pkg/gql/graph"
-	"github.com/andrioid/gostack-gql/pkg/gql/graph/generated"
+	"github.com/andrioid/gostack-gql/pkg/graph"
+	"github.com/andrioid/gostack-gql/pkg/graph/generated"
 )
 
 const defaultPort = "8080"
 
-func Server() {
+func main() {
 	port := os.Getenv("PORT")
 	if port == "" {
 		port = defaultPort

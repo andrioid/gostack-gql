@@ -7,8 +7,8 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/andrioid/gostack-gql/pkg/gql/graph/generated"
-	"github.com/andrioid/gostack-gql/pkg/gql/graph/model"
+	"github.com/andrioid/gostack-gql/pkg/graph/generated"
+	"github.com/andrioid/gostack-gql/pkg/graph/model"
 )
 
 // CreateTodo is the resolver for the createTodo field.
