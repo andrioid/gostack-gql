@@ -1,0 +1,13 @@
+services:
+  pgdb:
+    image: postgres:14
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=default
+    volumes:
+      - dbdata:/var/lib/postgres/data
+volumes:
+  dbdata: {}

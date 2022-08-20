@@ -9,11 +9,13 @@ import (
 	"github.com/99designs/gqlgen/graphql/playground"
 	"github.com/andrioid/gostack-gql/pkg/graph"
 	"github.com/andrioid/gostack-gql/pkg/graph/generated"
+	"github.com/andrioid/gostack-gql/pkg/pgdb"
 )
 
 const defaultPort = "8080"
 
 func main() {
+	pgdb.MigrateUp()
 	port := os.Getenv("PORT")
 	if port == "" {
 		port = defaultPort
