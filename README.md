@@ -6,6 +6,19 @@ Database functions are generated from database migration files with [sqlc](https
 
 The goal is to be able to focus on the business logic, and not re-implement things that are already defined in schemas.
 
-### Commands
+## Schemas as source of truth
 
-- `goose -dir pkg/pgdb/schema up`
+### Database schema: goose
+
+1. Add a new migration file into pkg/pgdb/schema
+2. Run the server (`go run server.go`)
+
+### Data management: sqlc
+
+1. Add new queries or commands to `pkg/pgdb/query.sql`
+2. Run `go generate ./...`
+
+### GraphQL API: gqlgen
+
+1. Make the necessary schema changes
+2. Run `go generate ./...`

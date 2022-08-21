@@ -1,12 +1,12 @@
 package main
 
 import (
-	"os"
-
+	"github.com/andrioid/gostack-gql/pkg/graph"
 	sqlc "github.com/kyleconroy/sqlc/pkg/cli"
 )
 
 func main() {
 	args := []string{"generate"}
-	os.Exit(sqlc.Run(args))
+	sqlc.Run(args)
+	graph.Generate()
 }

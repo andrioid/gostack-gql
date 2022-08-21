@@ -1,19 +1,19 @@
--- name: GetAuthor :one
-SELECT * FROM authors
+-- name: GetEvent :one
+SELECT * FROM event
 WHERE id = $1 LIMIT 1;
 
--- name: ListAuthors :many
-SELECT * FROM authors
+-- name: ListEvents :many
+SELECT * FROM event
 ORDER BY name;
 
--- name: CreateAuthor :one
-INSERT INTO authors (
-  name, bio
+-- name: CreateEvent :one
+INSERT INTO event (
+  id, name
 ) VALUES (
   $1, $2
 )
 RETURNING *;
 
--- name: DeleteAuthor :exec
-DELETE FROM authors
+-- name: DeleteEvent :exec
+DELETE FROM event
 WHERE id = $1;
