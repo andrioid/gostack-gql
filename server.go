@@ -7,19 +7,21 @@ import (
 
 	"github.com/99designs/gqlgen/graphql/handler"
 	"github.com/99designs/gqlgen/graphql/playground"
+	"github.com/andrioid/gostack-gql/pkg/db"
 	"github.com/andrioid/gostack-gql/pkg/graph"
 	"github.com/andrioid/gostack-gql/pkg/graph/generated"
-	"github.com/andrioid/gostack-gql/pkg/pgdb"
 )
 
 const defaultPort = "8080"
 
 func main() {
-	pgdb.MigrateUp()
+	db.MigrateUp()
 	port := os.Getenv("PORT")
 	if port == "" {
 		port = defaultPort
 	}
+
+	// TODO: Connect to DB and pass to Database package
 
 	srv := handler.NewDefaultServer(generated.NewExecutableSchema(generated.Config{Resolvers: &graph.Resolver{}}))
 

@@ -2,19 +2,12 @@
 
 package model
 
-type NewTodo struct {
-	Text   string `json:"text"`
-	UserID string `json:"userId"`
-}
-
-type Todo struct {
-	ID       string `json:"id"`
-	Text     string `json:"text"`
-	Donesies bool   `json:"donesies"`
-	User     *User  `json:"user"`
-}
-
-type User struct {
+type Event struct {
 	ID   string `json:"id"`
 	Name string `json:"name"`
+}
+
+type NewEvent struct {
+	Text   string `json:"text"`
+	UserID string `json:"userId"`
 }
